@@ -1,0 +1,58 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let marks=[23,45,67,89,90];
+        for(let i=0;i<marks.length;i++){
+            if(marks[i]<30){
+                console.log(marks[i] + " 4 divison");
+            }
+            else if(marks[i]<60){
+                console.log(marks[i] + " 3 divison");
+            }
+            else if(marks[i]<80){
+                console.log(marks[i] + " 2 divison");
+            }
+            else{
+                console.log(marks[i] + " 1 divison");
+            }
+        }
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        letmarks=[23,45,67,89,90];
+        let sum=0;
+        for(let i=0;i<marks.length;i++){
+            sum += marks[i];
+        }
+        let average=sum/marks.length;
+        if(average>=90){
+            console.log("grade A");
+        }
+        else if(average>=80){
+            console.log("grade B");
+        }
+        else if(average>=70){
+            console.log("grade C");
+        }
+        else{
+            console.log("grade D");
+        }
+    </script>
+</body>
+</html>
