@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in JS</title>
+</head>
+<body>
+    <script>
+        // object in js : is a collection(pair) of key(properties) and its value 
+
+        // create an object using  literal way.......
+
+        let student={ name:"megha",
+        age:23,
+        isMarried:false,
+        myMob:7092674746,
+        address:{
+            streetNo:23,
+            area:"indrapuram",
+            city:"aligarh",
+            pincode:202001,
+        },
+        course:"b.tech",
+        branch:"cse" ,
+        section:15,
+        year:2025,
+        getInfo(){
+            return"my education detail is " +student.course+" "+student.branch+" "+student.section+" "+student.year;
+        },
+        subjects:["maths","physics","chemistry","english"],
+        examDone:null
+            
+        };
+       // access object key or properties
+        console.log(student.name.pincode); // access nested object value
+        console.log(student.getInfo()); // access function in object
+        console.log(student.subjects[2]); // access array value in object
+
+        // find any key in object
+        console.log("course" in student); // it will show true because course is a key in student object
+        console.log("hobby" in student); // it will show false because hobby is not
+
+        // to delete any key from object
+        console.log(delete student.name); // it will delete from name from student object
+
+        //find length of object
+        let keysLength=Object.keys(student).length; // it will show length of keys in student object
+        console.log(keysLength);
+
+        // itterate objects keys(properties) using for loop
+
+        for(let i=0;i<keysLength;i++){
+            console.log(student[keysLength[i]]); // it will show all keys in student object
+        }
+
+        // itterate objects keys(properties) using for in loop
+        for(let x in student){
+            console.log(student[x]); // it will show all keys in student object
+        }
+
+        // create an object using new keyword
+
+        let myInfo=new Object();
+        myInfo.name="divyansh";
+        myInfo.age=23;
+        myInfo.city="delhi";
+        myInfo.address=null;
+        myInfo.mob=997456357;
+
+        // access objects keys using []
+        console.log(myInfo["name"]); // it will show divyansh
+        
+    </script> 
+    
+</body>
+</html>
