@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--The DOM (Document Object Model) is a programming interface (API) for web documents. It represents the structure of an HTML or XML page as a hierarchical tree of objects, allowing JavaScript to dynamically access, modify, and style the content of a webpage. -->
+    <h2>check your age to cast vote</h2>
+    <form action="">
+    <input type="text" placeholder="enter your age" name="age"/>
+    <input type="submit" value="submit" / onclick="result()"/>
+    </form>
+
+    <input type="text" placeholder="enter your name" id="inputData"/>
+    <h2 id="text"></h2>
+    <button ondblclick="changeColor()">click on me!</button>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique obcaecati nemo, eveniet quo non explicabo numquam laudantium, dolorem provident amet ex modi ipsa minus quasi quae. Placeat architecto facere minus.</p>
+
+    </h2>
+    <script>
+       /* function result(){
+            let myAge=document.getElementById('age').value; // it will get the value of input field
+            if(myAge>=18){
+                alert("you are eligible to vote");
+            } else {
+                alert("you are not eligible to vote");
+            }
+        }*/$
+        function changeColor(){
+            let inputValue=document.getElementById('inputData').value;
+            let inputText=document.getElementById('text');
+            inputText.innerHTML=inputValue; // it will get the value of input field and show it in h2 tag
+            inputText.style.color="red"; // it will change the color of text to red
+
+            //random color generator
+            let randomColor="#"+Math.floor(Math.random()*16777215).toString(16);
+            inputText.style.color=randomColor;
+            // change para color using addEventListener method
+            let para=document.getElementsByTagName('p')[0];
+            function changeParaColor(){
+            
+            }
+        }
+
+    </script>
+</body>
+</html>
