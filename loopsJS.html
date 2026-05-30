@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops in JS</title>
+</head>
+<body>
+    //loops in js : it is used to repeat a block of code until a specified condition is true
+    <script>
+        let students=["megha","abhay","priya","rohit","sneha"];
+       
+        // for loop
+        for(let i=0;i<students.length;i++){
+            console.log(students[i]); // it will show all students name in array
+        }
+
+        // while loop
+        let j=0;
+        while(j<students.length){
+            console.log(students[j]); // it will show all students name in array
+            j++;
+        }
+
+        // for of loop  itterate over itterate objects such as array and string and maps
+        for(let student of students){
+            console.log(student); // it will show all students name in array
+        }
+
+
+
+    </script>
+</body>
+</html>
