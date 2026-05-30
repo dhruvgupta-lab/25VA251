@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>java script</h1>
+    <script>
+        // js variables ..........containers that keeps either value or not
+        //JavaScript variables are named containers for storing data values. They allow you to label data with a descriptive name, making your code easier to read and manage, and the values stored in them can be changed (or vary) during program execution.
+        // var keword is used to declare a variable
+        var myName="divyansh";     // global scope variable
+        /*The JavaScript document is a global object that serves as the main entry point for interacting with a web page's content, structure, and style using JavaScript. It is a core part of the Document Object Model (DOM), a tree-like representation of the HTML structure*/
+        document.write(myName); // output on browser
+        console.log(myName); // output on console
+
+       //js execution and scope(global and local[block])
+       function hello(){
+        var msg="thank you to visit";  // local or block scope variable
+        console.log(msg);
+       }
+       hello(); // calling the function to execute the code inside it  
+
+       // variables declaration using let and const
+       let myRoll="2025b01010079";
+       console.log(myRoll);
+
+       myPhone="628275879";
+       console.log("my contact no is:" + myPhone);
+
+
+    </script>
+</body>
+</html>
