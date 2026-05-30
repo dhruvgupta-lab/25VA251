@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //function:-block of codes that performs a specific task
+        //types of function:-with parameter and without parameter and default parameter
+        
+        // normal function without parameter
+        function demo(){
+            console.log("This is a normal function without parameter");
+        }
+        demo(); // calling the function or function invocation
+
+        // function with parameter
+        function demo1(text){
+            console.log("hello"+text);
+        }
+        demo1("react");
+
+       // function with default parameter
+         function add(a,b=5){
+          var num1=a;
+          var num2=b;
+          var sum=num1+num2;
+          console.log("The sum is: "+sum);
+         }
+         add(5); 
+
+         // In JavaScript, synchronous functions execute tasks sequentially and block the program until completion, while asynchronous functions allow other code to run concurrently, preventing the application from becoming unresponsive
+        
+         // synchronus function
+        /* function cal(){
+            function add(a,b){
+                console.log("addition: "+(a+b));
+            }
+            function sub(a,b){
+                console.log("subtraction: "+(a-b));
+            }
+            function mul(a,b){
+                console.log("multiplication: "+(a*b));
+            }
+            mul(5,3);
+            add(4,5);
+            sub(5,3);
+         }
+        cal();*/
+
+        //anonymous function in JavaScript is a function that does not have a name or an identifier.
+        let msg=function(){
+            console.log("This is an anonymous function");
+         }
+         msg();
+
+        // short code for above function is arrow function
+        let message=()=>{
+            console.log("This is an arrow function");
+        }
+        message();
+
+        // arrow function with multiple lines
+
+        let msg1=(age)=>{
+            if (age >= 18) {
+                console.log("You are an adult");
+            } else {
+                console.log("You are not an adult");
+            }
+        }
+        msg1(20);
+
+        // call back function:- A callback function is a function that is passed as an argument to another function and is executed after a certain event or condition is met. It allows you to handle asynchronous operations and perform actions once a task is completed.
+        function cal(a,b,callback){
+        var1=a;
+        console.log("first number is: "+var1);
+        var2=b;
+        console.log("second number is: "+var2);
+        var result=var1+var2;  
+        callback(result);  
+        }
+        function display(result){
+            console.log("The result is: "+result);
+        }
+
+        cal(15,20,display);
+
+        // call back function with setTimeout API method
+        //The setTimeout() method in JavaScript schedules a callback function to be executed once after a specified delay in milliseconds.
+        function greet(){
+            document.writeln("Hello students, welcome to JavaScript class");
+        }
+        function loading(){
+            document.writeln(" Data Loading...");
+        }
+        loading();
+        setTimeout(greet, 2000);
+        
+        //calback hell or pyramid of doom
+        //Callback hell, also known as the "pyramid of doom," is a situation in JavaScript where multiple nested callback functions make the code difficult to read, debug, and maintain
+
+
+        // java script promises :JavaScript Promises make handling asynchronous operations like API calls, file loading, or time delays easier
+        
+        // promise stages.....
+        // pending:- The initial state of a promise, where the asynchronous operation is still in progress and has not yet completed.
+        // fulfilled:- The state of a promise when the asynchronous operation has completed successfully, and the promise has been resolved with a value.
+        // rejected:- The state of a promise when the asynchronous operation has failed, and the promise has been rejected with a reason (error).   
+
+        let promise=new Promise(function(resolve,reject){
+            let myAge=23;
+            if(myAge>=18){
+                resolve("valid age to vote");
+            } else {
+                reject("wait for next year");
+            }
+        });
+        promise.then(function(result){     // then always return true
+            console.log(result);
+        }).catch(function(error){         // catch always return false
+            console.log(error);
+        });
+
+        //async and await are modern JavaScript keywords (introduced in ES2017) that allow developers to write asynchronous code in a cleaner, more synchronous-like style. 
+
+        // fetch api
+
+       /* async function userData(){
+            let userResponse=await fetch("https://jsonplaceholder.typicode.com/users");
+            console.log(userResponse);
+            let userDataResponse=await userResponse.json();
+            console.log(userDataResponse)
+        }
+        userData();*/
+
+        // async await with error handling using try catch block
+         
+        async function productDetail(){
+            try{
+                let proRes=await fetch("https://fakestoreapi.com/products");
+                let proResData=await proRes.json();
+                console.log(proResData);
+            }
+            catch (error){
+                console.log("Error fetching product details: "+error);
+            }
+        }
+        productDetail();
+    </script>
+</body>
+</html>
